@@ -237,21 +237,27 @@ class HomeView extends StatelessWidget {
                 children: [
                   Container(height: 200, width: 20, color: Color(0xffEFAD18)),
 
-                  Stack(
-                    children: [
-                      Image.asset(
-                        "assets/images/Shadow.png",
-                        fit: BoxFit.contain,
-                        height: 200,
-                      ),
-                      Positioned(
-                        child: Image.asset(
-                          "assets/images/Product.png",
-                          height: 130,
+                  Transform.translate(
+                    offset: Offset(-10, 0),
+                    child: Stack(
+                      children: [
+                        Image.asset(
+                          "assets/images/Shadow.png",
+                          fit: BoxFit.contain,
+                          height: 200,
                         ),
-                      ),
-                    ],
+                        Positioned(
+                          top: 50,
+                          left: 17,
+                          child: Image.asset(
+                            "assets/images/Product.png",
+                            height: 85,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
+                  SizedBox(width: 25),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     mainAxisAlignment: MainAxisAlignment.center,
